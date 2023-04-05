@@ -1,4 +1,5 @@
- /* Background gradient created using the following colour codes */ 
+.body{
+/* Background gradient created using the following colour codes */ 
 
 background-image: radial-gradient(circle, #d423e7, #8e72ff, #2297ff, #00b0ff, #00c2f7, #00cdef, #00d7de, #00dec7, #00e7b8, #00efa0, #00f581, #30fa58);
 
@@ -11,3 +12,4 @@ box-shadow:
   25.2px 47.1px 45.3px rgba(0, 0, 0, 0.293),
   69px 129px 124px rgba(0, 0, 0, 0.37)
 ;
+}
