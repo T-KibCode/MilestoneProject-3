@@ -1,14 +1,15 @@
+body{
+
 /* Background gradient created using the following colour codes */ 
 
-background-image:linear-gradient(to left top, #d31de1, #5e83ff, #00b1ff, #00d0ff, #3de5e9)
+background:linear-gradient(to left top, #d31de1, #5e83ff, #00b1ff, #00d0ff, #3de5e9)
 
 /* Box shadow shading to be used with Popup Alert menu's in line with Javascript alert prompts */
 
-box-shadow:
+box-shadow
   2.4px 4.4px 4.3px rgba(0, 0, 0, 0.098),
   6px 11.2px 10.8px rgba(0, 0, 0, 0.171),
   12.2px 22.9px 22px rgba(0, 0, 0, 0.234),
   25.2px 47.1px 45.3px rgba(0, 0, 0, 0.293),
   69px 129px 124px rgba(0, 0, 0, 0.37)
-;
 }
