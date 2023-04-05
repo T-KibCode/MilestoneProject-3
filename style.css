@@ -1,6 +1,6 @@
- /* Background gradient created using the following colour codes */ 
+/* Background gradient created using the following colour codes */ 
 
-background-image: radial-gradient(circle, #d423e7, #8e72ff, #2297ff, #00b0ff, #00c2f7, #00cdef, #00d7de, #00dec7, #00e7b8, #00efa0, #00f581, #30fa58);
+background-image:() linear-gradient(to left top, #d31de1, #5e83ff, #00b1ff, #00d0ff, #3de5e9)
 
 /* Box shadow shading to be used with Popup Alert menu's in line with Javascript alert prompts */
 
