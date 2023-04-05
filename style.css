@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-=======
-.body{
->>>>>>> 3d131f660925072f6cf13c455a35aaa4b581a894
 /* Background gradient created using the following colour codes */ 
 
-background-image:() linear-gradient(to left top, #d31de1, #5e83ff, #00b1ff, #00d0ff, #3de5e9)
+background-image:linear-gradient(to left top, #d31de1, #5e83ff, #00b1ff, #00d0ff, #3de5e9)
 
 /* Box shadow shading to be used with Popup Alert menu's in line with Javascript alert prompts */
 
