@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+.body{
+>>>>>>> 3d131f660925072f6cf13c455a35aaa4b581a894
 /* Background gradient created using the following colour codes */ 
 
 background-image:() linear-gradient(to left top, #d31de1, #5e83ff, #00b1ff, #00d0ff, #3de5e9)
@@ -11,3 +15,4 @@ box-shadow:
   25.2px 47.1px 45.3px rgba(0, 0, 0, 0.293),
   69px 129px 124px rgba(0, 0, 0, 0.37)
 ;
+}
