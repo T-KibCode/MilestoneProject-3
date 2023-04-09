@@ -35,3 +35,14 @@
   25.2px 47.1px 45.3px rgba(0, 0, 0, 0.293),
   69px 129px 124px rgba(0, 0, 0, 0.37)
 }
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item{
+  flex: 1;
+  margin: 10px;
+  padding: 10px;
+}
