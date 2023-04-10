@@ -26,6 +26,6 @@ if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP", "0.0.0.0"),
         port=int(os.environ.get("PORT","5000")),
-        debug=True) ##Do not run debug = true when deployed, only when testing ##
+        debug=False) ##Do not run debug = true when deployed, only when testing ##
     
 
