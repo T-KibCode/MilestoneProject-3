@@ -1,19 +1,12 @@
 import os
 from flask import Flask
+from flask_bootstrap import Bootstrap
 
-app = Flask(__name__)
+def create_app():
+  app = Flask(__name__)
+  Bootstrap(app)
 
-@app.route("/")
-def index():
-    return "Hello World"
-
-if __name__ == "__name__":
-    app.run(
-        host=os.environ.get("IP","0.0.0.0"),
-        port=int(os.environ.get("PORT","5000")),
-        debug=True
-	)
-
+  return app
 
 # import requests
 # import moviecreds
