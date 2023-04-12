@@ -1,17 +1,22 @@
 import os
-from flask import Flask
+from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
 
 @app.route("/")
-def index():
-    return "Hello! this is the main page" 
+def home():
+    return render_template("index.html")
+
+@app.route("/<name>")
+def user(name):
+    return f"Hello {name}"
+
+@app.route("/admin")
+def admin():
+    return redirect(url_for("user",name="Admin!"))
 
 if __name__ == "__name__":
-    app.run(
-        host=os.environ.get("IP","0.0.0.0"),
-        port=int(os.environ.get("PORT","5000")),
-        debug=True)
+    app.run()
 
 
 
