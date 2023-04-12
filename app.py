@@ -10,5 +10,3 @@ def home(name):
 if __name__ == "__name__":
     app.run()
 
-
-
