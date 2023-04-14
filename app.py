@@ -2,9 +2,19 @@ from flask import Flask, redirect, url_for, render_template
 
 app = Flask(__name__)
 
-@app.route("/<name>")
+@app.route("/")
 def home(name):
     return render_template("index.html")
+
+@app.route("/login")
+def login(name):
+    return render_template("login.html")
+
+@app.route("/search")
+def search(name):
+    return render_template("search.html")
+
+
 
 
 if __name__ == "__main__":
