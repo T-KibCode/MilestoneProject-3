@@ -1,6 +1,9 @@
-import os
 from flask import Flask, render_template
-
+from jinja2 import Environment, PackageLoader, select_autoescape
+env = Environment(
+    loader=PackageLoader("app.py"),
+    autoescape=select_autoescape()
+)
 
 app = Flask(__name__)
 
@@ -13,10 +16,10 @@ def index():
 def about():
     return render_template("about.html")
 
-
 if __name__ == "__main__":
     app.run(
-        host=os.environ.get("IP", "0.0.0.0"),
-        port=int(os.environ.get("PORT", "5000")),
-        debug=True)
-    
+        host=("IP","0.0.0.0"),
+        port=int("PORT","5000"),
+        debug=True
+    )
+
