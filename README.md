@@ -37,6 +37,18 @@ The reason for my choosing of this project specifically, is because I wanted the
 
 
 
+# Initial template build process - understanding functions available
+
+<details>
+  <details>Proof of testing rendered functions</details>
+
+  ### Initial test processes.
+  In my initial commits within the repository, I had issues intially getting my Flask modules to be recognised and for the app.py python file to render to the html file. 
+
+  I cited an external resource in order to solve the issue of routing which was at the following link on youtube.
+
+  
+
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
