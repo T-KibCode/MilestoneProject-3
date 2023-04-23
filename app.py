@@ -29,11 +29,16 @@ def home():
 
 @app.route("/login")
 def login():
-    return render_template("login.html", title="About")
+    return render_template("login.html", title="Login")
 
 @app.route("/search")
 def search():
-    return render_template("search.html")
+    return render_template("search.html", title="Film Search")
+
+@app.route("/signup")
+def signup():
+    return render_template("signup.html", title="Signup")
+
 
 
 if __name__ == "__main__":
