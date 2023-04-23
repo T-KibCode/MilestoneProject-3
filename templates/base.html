@@ -24,16 +24,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}">Home</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link active" href="/login">Login</a>
+          <a class="nav-link active" href="{{ url_for('login') }}">Login</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link active" href="/search">Search</a>
+          <a class="nav-link active" href="{{ url_for('search') }}">Search</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link active" href="/signup">Signup</a>
+          <a class="nav-link active" href="{{ url_for('signup') }}">Signup</a>
           </li>
         </ul>
       </div>
@@ -44,6 +44,15 @@
 <main role="main" class="container">
   <div class="row">
     <div class="col-md-8">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
       {% block content %}{% endblock %}
     </div>
     <div class="content-section col-md-4">
