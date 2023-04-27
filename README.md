@@ -48,7 +48,7 @@ The reason for my choosing of this project specifically, is because I wanted the
   I cited an external resource in order to solve the issue of routing which was at the following link on youtube.
 
   
-
+I've had to use an online conversion tool in order to convert a movie database from a tsv.gz file , to uncompress the file into .tsv format, and to convert it using a website named [https://www.convertsimple.com/convert-tsv-to-sql-insert-statement/]
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
