@@ -1,6 +1,6 @@
 import requests
-from flask import redirect, url_for, render_template, flash, redirect
-from flickfanatic import app
+from flask import render_template, url_for, redirect, flash, redirect
+from flickfanatic import app, db, bcrypt
 from flickfanatic.forms import RegistrationForm, LoginForm
 from flickfanatic.models import User, Post
 
@@ -36,8 +36,12 @@ def search():
 def signup():
     form = RegistrationForm()
     if form.validate_on_submit():
-        flash(f'Account created for {form.username.data}!', 'success')
-        return redirect(url_for('home'))
+        hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
+        user = User(username=form.username.data, email=form.email.data, password=hashed_password)
+        db.session.add(user)
+        db.session.commit()
+        flash('Your account has been created! You are now able to log in', 'success')
+        return redirect(url_for('login'))
     return render_template("signup.html", title="Signup", form=form)
 
 @app.route("/login", methods=['GET','POST'])

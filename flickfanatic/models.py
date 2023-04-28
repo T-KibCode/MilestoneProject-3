@@ -1,4 +1,4 @@
-
+import requests
 from datetime import datetime
 from flickfanatic import db
 
@@ -23,10 +23,3 @@ class Post(db.Model):
 
     def __repr__(self):
         return f"Post('{self.title}','{self.date_posted}')"
-    
-#class Movie(db.Model):
-    #id = db.Column(db.Integer, primary_key=True)
-    #title = db.Column(db.String(100), nullable=False)
-    #director = db.Column(db.String(100), nullable=False)
-    #year = db.Column(db.Integer, nullable=False)
-    #genre = db.Column(db.String(100), nullable=False)
