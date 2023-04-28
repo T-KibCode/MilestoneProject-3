@@ -4,6 +4,7 @@ from flask import Flask, redirect, url_for, render_template, flash, redirect
 from flask_sqlalchemy import SQLAlchemy
 from forms import RegistrationForm, LoginForm
 
+
 app = Flask(__name__)
 
 
@@ -28,12 +29,21 @@ class User(db.Model):
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
-    dat_posted =db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    date_posted =db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     content = db.Column(db.Text, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
     def __repr__(self):
         return f"Post('{self.title}','{self.date_posted}')"
+    
+
+class Movie(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(100), nullable=False)
+    director = db.Column(db.String(100), nullable=False)
+    year = db.Column(db.Integer, nullable=False)
+    genre = db.Column(db.String(100), nullable=False)
+
 
 ## Dummy Data 
 posts = [
@@ -80,6 +90,12 @@ def login():
         else:
             flash('Login Unsuccessful. Please check username and password', 'danger')
     return render_template("login.html", title="Login", form=form)
+
+@app.route('/movies')
+def movies():
+    
+    movies = Movie.query.all()
+    return render_template('movies.html', movies=movies)
 
 
 
