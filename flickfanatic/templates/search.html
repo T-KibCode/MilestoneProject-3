@@ -1,2 +1,21 @@
 {% extends "base.html" %}
 {% block title %}Film Search{% endblock %}
+
+{% block content %}
+  <h1>Search Movies</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 mt-3">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search...">
+          <select class="form-select">
+            <option selected>Movie Name</option>
+            <option>Year</option>
+            <option>Actor</option>
+          </select>
+          <button class="btn btn-primary">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

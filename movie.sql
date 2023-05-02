@@ -36,3 +36,6 @@ VALUES
   ('Joker', '2019-10-04', 'Crime, Drama, Thriller', 'Todd Phillips', 'In Gotham City, mentally-troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime.', 'https://www.example.com/posters/joker.jpg'),
   ('The Irishman', '2019-11-27', 'Biography, Crime, Drama', 'Martin Scorsese', 'A mob hitman recalls his possible involvement with the slaying of Jimmy Hoffa.', 'https://www.example.com/posters/the-irishman.jpg'),
   ('1917','2019-12-25','Drama, War','Sam Mendes',"Two young British soldiers during the First World War are given an impossible mission: deliver a message deep in enemy territory that will stop 1,600 men, and one of the soldiers' brothers, from walking straight into a deadly trap.",'https://www.example.com/posters/1917.jpg');
+
+
+
