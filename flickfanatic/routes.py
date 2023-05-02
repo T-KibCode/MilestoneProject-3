@@ -1,14 +1,13 @@
 import os
 import secrets
 from PIL import Image
-from flask import render_template, url_for, flash, redirect
+from flask import render_template, url_for, flash, redirect, request
 from flickfanatic import app, db, bcrypt
 from flickfanatic.forms import RegistrationForm, LoginForm, UpdateAccountForm
 from flickfanatic.models import User, Post
 from flask_login import login_user, current_user, logout_user, login_required
 
 
-## Dummy Data 
 posts = [
     {
     'author': 'Twaha Kibirige',
@@ -27,14 +26,18 @@ posts = [
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template('index.html', title='Home', posts=posts)
+    return render_template('home.html', posts=posts)
 
 @app.route("/about")
 def about():
     return render_template('about.html', title='About')
 
-@app.route("/signup", methods=['GET','POST'])
-def signup():
+@app.route("/search")
+def search():
+    return render_template('search.html', title='Search')
+
+@app.route("/register", methods=['GET','POST'])
+def register():
     if current_user.is_authenticated:
         return redirect(url_for('home'))
     form = RegistrationForm()
@@ -45,7 +48,7 @@ def signup():
         db.session.commit()
         flash('Your account has been created! You are now able to log in', 'success')
         return redirect(url_for('login'))
-    return render_template('signup.html', title='Signup', form=form)
+    return render_template('register.html', title='Register', form=form)
 
 @app.route("/login", methods=['GET','POST'])
 def login():
