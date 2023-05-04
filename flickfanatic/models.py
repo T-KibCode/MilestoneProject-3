@@ -1,32 +1,47 @@
-import os
-from datetime import datetime
-from flickfanatic import db, login_manager
-from flask_login import UserMixin
+import os #import os
+import jwt
+from datetime import datetime, timezone, timedelta
+from flask import app #import datetime
+from itsdangerous import TimedJSONWebSignatureSerializer as Serializer #import serializer
+from flickfanatic import db, login_manager #import db and login manager
+from flask_login import UserMixin #user model
 
 
-@login_manager.user_loader
-def load_user(user_id):
-    return User.query.get(int(user_id))
+@login_manager.user_loader #load user by id
+def load_user(user_id): #load user by id
+    return User.query.get(int(user_id)) #get user by id
 
 
-class User(db.Model, UserMixin):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(20), unique=True, nullable=False)
-    email = db.Column(db.String(120), unique=True, nullable=False)
-    image_file = db.Column(db.String(20), nullable=False, default='default.jpg')
-    password = db.Column(db.String(60), nullable=False)
-    posts = db.relationship('Post', backref='author', lazy=True)
+class User(db.Model, UserMixin): #user model
+    id = db.Column(db.Integer, primary_key=True) #unique id
+    username = db.Column(db.String(20), unique=True, nullable=False) #unique username
+    email = db.Column(db.String(120), unique=True, nullable=False) #unique email
+    image_file = db.Column(db.String(20), nullable=False, default='default.jpg') #profile picture
+    password = db.Column(db.String(60), nullable=False) #hash password
+    posts = db.relationship('Post', backref='author', lazy=True) #one to many relationship with posts
 
-    def __repr__(self):
-        return f"User('{self.username}', '{self.email}', '{self.image_file}')"
+    def get_reset_token(self, expired_sec=1800):
+            s = jwt.encode({"exp": datetime.now(tz=timezone.utc) + timedelta(
+                seconds=expired_sec), "user_id": self.id}, app.config['SECRET_KEY'], algorithm="HS256")
+            return s
+
+    @staticmethod
+    
+    def verify_reset_token(token): #verify token
+        try: #try to decode token
+            s = jwt.decode(token, app.config['SECRET_KEY'], algorithms=["HS256"]) #decode token
+            user_id = s['user_id'] #get user id
+        except: #if token is invalid
+            return None #return none if token is invalid
+        return User.query.get(user_id) #return user id
 
 
-class Post(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(100), nullable=False)
-    date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    content = db.Column(db.Text, nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+class Post(db.Model): #post model
+    id = db.Column(db.Integer, primary_key=True) #unique id
+    title = db.Column(db.String(100), nullable=False) #title
+    date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow) #date posted
+    content = db.Column(db.Text, nullable=False) #content
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False) #user id 
 
-    def __repr__(self):
+    def __repr__(self): #return post object
         return f"Post('{self.title}', '{self.date_posted}')"
