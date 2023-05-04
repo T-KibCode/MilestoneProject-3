@@ -3,7 +3,7 @@ import jwt
 from datetime import datetime, timezone, timedelta
 from flask import app #import datetime
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer #import serializer
-from flickfanatic import db, login_manager #import db and login manager
+from flickfanatic import db, login_manager, app #import db and login manager
 from flask_login import UserMixin #user model
 
 
@@ -21,9 +21,9 @@ class User(db.Model, UserMixin): #user model
     posts = db.relationship('Post', backref='author', lazy=True) #one to many relationship with posts
 
     def get_reset_token(self, expired_sec=1800): #get reset token
-         s = jwt.encode({"exp": datetime.now(tz=timezone.utc) + timedelta(
-             seconds=expired_sec), "user_id": self.id}, app.config['SECRET_KEY'], algorithm="HS256") #encode token
-         return s #return token
+        s = jwt.encode({"exp": datetime.now(tz=timezone.utc) + timedelta(
+            seconds=expired_sec), "user_id": self.id}, app.config['SECRET_KEY'], algorithm="HS256") #encode token
+        return s #return token
 
     @staticmethod #static method
     def verify_reset_token(token): #verify reset token
