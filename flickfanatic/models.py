@@ -20,20 +20,19 @@ class User(db.Model, UserMixin): #user model
     password = db.Column(db.String(60), nullable=False) #hash password
     posts = db.relationship('Post', backref='author', lazy=True) #one to many relationship with posts
 
-    def get_reset_token(self, expired_sec=1800):
-            s = jwt.encode({"exp": datetime.now(tz=timezone.utc) + timedelta(
-                seconds=expired_sec), "user_id": self.id}, app.config['SECRET_KEY'], algorithm="HS256")
-            return s
+    def get_reset_token(self, expired_sec=1800): #get reset token
+         s = jwt.encode({"exp": datetime.now(tz=timezone.utc) + timedelta(
+             seconds=expired_sec), "user_id": self.id}, app.config['SECRET_KEY'], algorithm="HS256") #encode token
+         return s #return token
 
-    @staticmethod
-    
-    def verify_reset_token(token): #verify token
-        try: #try to decode token
+    @staticmethod #static method
+    def verify_reset_token(token): #verify reset token
+        try:
             s = jwt.decode(token, app.config['SECRET_KEY'], algorithms=["HS256"]) #decode token
             user_id = s['user_id'] #get user id
-        except: #if token is invalid
+        except: 
             return None #return none if token is invalid
-        return User.query.get(user_id) #return user id
+        return User.query.get(user_id) #return user by id
 
 
 class Post(db.Model): #post model
