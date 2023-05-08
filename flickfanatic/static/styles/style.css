@@ -1,13 +1,22 @@
 /* body{
     background-image: linear-gradient(to left top, #ee72f1, #9d9fff, #09bdff, #00cfff, #39dae4);
     background-image: linear-gradient(to left top, #f362f8, #979fff, #00c5ff, #00deff, #61edf4);
+    background-image: linear-gradient(to left top, #f7ccf9, #dad8ff, #bfe4ff, #afedff, #b2f3f6);
 }
 */
 
+html {
+    height: 100%;
+}
+
 body {
-    background: #fafafa;
+    background-image: linear-gradient(to left top, #f7ccf9, #dad8ff, #bfe4ff, #afedff, #b2f3f6);
     margin-top: 5rem;
     padding-top: 65px;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 h1,h2,h3,h4,h5,h6 {

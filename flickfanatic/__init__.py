@@ -20,7 +20,7 @@ bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 mail = Mail(app)
 
-login_manager.login_view ='login'
+login_manager.login_view ='login' # type: ignore
 login_manager.login_message_category = 'info'
 
 from flickfanatic import routes
