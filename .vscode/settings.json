@@ -34,5 +34,11 @@
    "python.analysis.typeCheckingMode": "basic",
    "[javascript]": {
       "editor.defaultFormatter": "vscode.typescript-language-features"
-   }
+   },
+   "[jsonc]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+   },
+   "pgsql.applyLocalization": false,
+   "pgsql.debugServerPort": 3306,
+   "pgsql.enableStartupDebugging": true
 }
