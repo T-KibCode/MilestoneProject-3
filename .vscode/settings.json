@@ -30,7 +30,7 @@
    ],
    "python.testing.unittestEnabled": false,
    "python.testing.pytestEnabled": true,
-   "sqltools.useNodeRuntime": true,
+   "sqltools.useNodeRuntime": false,
    "python.analysis.typeCheckingMode": "basic",
    "[javascript]": {
       "editor.defaultFormatter": "vscode.typescript-language-features"
@@ -40,5 +40,28 @@
    },
    "pgsql.applyLocalization": false,
    "pgsql.debugServerPort": 3306,
-   "pgsql.enableStartupDebugging": true
+   "pgsql.enableStartupDebugging": true,
+   "pgsql.connections": [
+      {
+         "server": "{{put-server-name-here}}",
+         "database": "{{put-database-name-here}}",
+         "user": "{{put-username-here}}",
+         "password": "{{put-password-here}}"
+      }
+   ],
+   "sqltools.completionLanguages": [],
+   "sqltools.formatLanguages": [],
+   "pgsql.intelliSense.lowerCaseSuggestions": true,
+   "pgsql.useDebugSource": true,
+   "sqltools.connections": [
+      {
+         "previewLimit": 50,
+         "server": "localhost",
+         "port": 5432,
+         "driver": "PostgreSQL",
+         "name": "admin",
+         "database": "admin",
+         "username": "admin"
+      }
+   ]
 }

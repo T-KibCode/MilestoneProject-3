@@ -4,7 +4,7 @@ from datetime import datetime, timezone, timedelta
 from flask import app #import datetime
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer #import serializer
 from flickfanatic import db, login_manager, app #import db and login manager
-from flask_login import UserMixin #user model
+from flask_login import UserMixin #import usermixin
 
 
 @login_manager.user_loader #load user by id

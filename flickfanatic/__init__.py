@@ -6,8 +6,14 @@ from flask_login import LoginManager
 from flask_mail import Mail
 from itsdangerous import URLSafeSerializer as Serializer
 
+
 app =Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY") or os.urandom(24)
+if os.environ.get("DEVELOPMENT") == "True":
+    app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL")
+else:
+    app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
+
 app.config['SECRET_KEY'] = '79d20b7616702de60f914aabc8b86f78'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
