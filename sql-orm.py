@@ -35,6 +35,13 @@ class Actor(base):
     LastName = Column(String)
     MovieId = Column(Integer, ForeignKey('movie.MovieId'))
 
+class MovieActor(base):
+    __tablename__ = 'movie_actor'
+    MovieId = Column(Integer, ForeignKey('movie.MovieId'), primary_key=True)
+    ActorId = Column(Integer, ForeignKey('actor.ActorId'), primary_key=True)
+    movie = relationship('Movie', backref='movie_actor')
+    actor = relationship('Actor', backref='movie_actor')
+
 Session = sessionmaker(db)
 session = Session()
 
