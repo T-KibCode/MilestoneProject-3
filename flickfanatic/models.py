@@ -1,8 +1,9 @@
 import os #import os
 import jwt
+import configparser #import configparser
 from datetime import datetime, timezone, timedelta
 from flask import app #import datetime
-from itsdangerous import TimedJSONWebSignatureSerializer as Serializer #import serializer
+from itsdangerous.url_safe import URLSafeTimedSerializer as Serializer #import serializer
 from flickfanatic import db, login_manager, app #import db and login manager
 from flask_login import UserMixin #import usermixin
 
@@ -22,13 +23,13 @@ class User(db.Model, UserMixin): #user model
 
     def get_reset_token(self, expired_sec=1800): #get reset token
         s = jwt.encode({"exp": datetime.now(tz=timezone.utc) + timedelta(
-            seconds=expired_sec), "user_id": self.id}, app.config['SECRET_KEY'], algorithm="HS256") #encode token
+            seconds=expired_sec), "user_id": self.id}, app.config['SECRET_KEY'], algorithm="HS256") # type: ignore #encode token
         return s #return token
 
     @staticmethod #static method
     def verify_reset_token(token): #verify reset token
         try:
-            s = jwt.decode(token, app.config['SECRET_KEY'], algorithms=["HS256"]) #decode token
+            s = jwt.decode(token, app.config['SECRET_KEY'], algorithms=["HS256"]) # type: ignore #decode token
             user_id = s['user_id'] #get user id
         except: 
             return None #return none if token is invalid

@@ -62,6 +62,16 @@
          "name": "admin",
          "database": "admin",
          "username": "admin"
+      },
+      {
+         "previewLimit": 80,
+         "server": "postgres://ijxmarjs:pTVmCWurbcXqnbx0Gwxs_CRh8YWuZZvi@rogue.db.elephantsql.com/ijxmarjs",
+         "driver": "PostgreSQL",
+         "name": "OnlineElephantSQL",
+         "username": "admin",
+         "database": "ijxmarjs",
+         "password": "pTVmCWurbcXqnbx0Gwxs_CRh8YWuZZvi",
+         "connectString": "postgres://ijxmarjs:pTVmCWurbcXqnbx0Gwxs_CRh8YWuZZvi@rogue.db.elephantsql.com/ijxmarjs"
       }
    ]
 }
