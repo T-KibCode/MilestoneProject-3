@@ -45,3 +45,4 @@ class Post(db.Model): #post model
 
     def __repr__(self): #return post object
         return f"Post('{self.title}', '{self.date_posted}')"
+
