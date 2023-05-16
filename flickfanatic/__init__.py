@@ -7,7 +7,7 @@ if os.path.exists("env.py"):
     import env #noqa
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '79d20b7616702de60f914aabc8b86f78'
+app.config['SECRET_KEY'] = 'tokenSecretKey'
 app.config['SQLALCHEMY_DATABASE_URI'] ='sqlite:///site.db'
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
