@@ -97,72 +97,29 @@ VALUES (1, 'Samuel L.', 'Jackson'),
        (38, 'Frances', 'McDormand');
 
 
---@BLOCK
-INSERT INTO actor_movie (actor_id, movie_id) 
-VALUES (1, 1),
-       (2, 1),
-       (2, 8),
-       (2, 19),
-       (3, 1),
-       (3, 8),
-       (3, 14),
-       (4, 8),
-       (4, 12),
-       (5, 4),
-       (5, 5),
-       (5, 12),
-       (6, 4),
-       (6, 12),
-       (7, 4),
-       (7, 6),
-       (7, 8),
-       (7, 13),
-       (8, 4),
-       (8, 6),
-       (8, 8),
-       (8, 13),
-       (9, 11),
-       (9, 12),
-       (9, 19),
-       (10, 11),
-       (10, 12),
-       (11, 11),
-       (11, 12),
-       (11, 19),
-       (12, 6),
-       (12, 12),
-       (13, 6),
-       (13, 12),
-       (13, 19),
-       (14, 6),
-       (14, 13),
-       (14, 14),
-       (15, 15),
-       (15, 19),
-       (16, 15),
-       (16, 19),
-       (17, 15),
-       (17, 19),
-       (18, 1),
-       (18, 2),
-       (18, 9),
-       (18, 18),
-       (19, 1),
-       (19, 2),
-       (19, 4),
-       (19, 9),
-       (19, 18),
-       (20, 1),
-       (20, 2),
-       (20, 4),
-       (20, 9),
-       (20, 18);
+
 
 -- @BLOCK
-SELECT * FROM actor;
+SELECT FirstName, LastName FROM actor;
+
+WHERE
 
 -- @BLOCK
 SELECT * FROM movie;
 
 -- @BLOCK
 SELECT * FROM actor_movie 
+
+-- @BLOCK
+DROP TABLE actor_movie
+
+-- @BLOCK
+CREATE INDEX FirstName_index ON actor(FirstName);
+CREATE INDEX LastName_index ON actor(LastName);
+CREATE INDEX Title_index ON movie(Title);
+CREATE INDEX ReleaseYear_index ON movie(ReleaseYear);
+CREATE INDEX Rating_index ON movie(Rating);
+
+
+-- @BLOCK
+SELECT

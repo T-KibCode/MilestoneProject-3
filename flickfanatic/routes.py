@@ -1,4 +1,5 @@
 import os
+from pydoc import pager
 import secrets
 import jwt
 from PIL import Image
@@ -17,29 +18,14 @@ def home():
     return render_template('home.html', posts=posts)
 
 @app.route("/search")
-def search():
+def search(): 
     return render_template('search.html', title='Movie Search')
-
-@app.route("/search", Methods=['POST'])
-def search():
-    form = SearchForm()
-    posts = Post.query
-    if form.validate_on_submit():
-        post.searched = form.searched.data
-
-        posts = posts.filter(Post.title.like('%' + post.searched + '%'))
-        posts = posts.order_by(Post.date_posted.desc()).paginate(page=page, per_page=5)
-    return render_template('search.html', title='Search', posts=posts)
-    
-    form = form,
-    searched = post.searched,
-    
 
    
 
 @app.route("/register", methods=['GET','POST'])
 def register():
-    if current_user.is_authenticated: # type: ignore
+    if current_user.is_authenticated: 
         return redirect(url_for('home'))
     form = RegistrationForm()
     if form.validate_on_submit():
