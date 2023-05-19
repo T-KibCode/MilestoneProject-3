@@ -18,13 +18,26 @@ def home():
     posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=5)
     return render_template('home.html', posts=posts)
 
-@app.route("/about")
-def about():
-    return render_template('about.html', title='About')
-
 @app.route("/search")
 def search():
-    return render_template('search.html', title='Search')
+    return render_template('search.html', title='Movie Search')
+
+@app.route("/search", Methods=['POST'])
+def search():
+    form = SearchForm()
+    posts = Post.query
+    if form.validate_on_submit():
+        post.searched = form.searched.data
+
+        posts = posts.filter(Post.title.like('%' + post.searched + '%'))
+        posts = posts.order_by(Post.date_posted.desc()).paginate(page=page, per_page=5)
+    return render_template('search.html', title='Search', posts=posts)
+    
+    form = form,
+    searched = post.searched,
+    
+
+   
 
 @app.route("/register", methods=['GET','POST'])
 def register():

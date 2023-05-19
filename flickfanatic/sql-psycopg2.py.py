@@ -8,10 +8,13 @@ cursor = connnection.cursor()
 
 
 #query 1 select all records from the movies table
-cursor.execute("SELECT * FROM movies")
+def movies():
+    cursor.execute("SELECT * FROM movies")
+    return movies.fetchall()
 
-#fetch the result (all)
-results = cursor.fetchall("SELECT * FROM movies")
+def actors():
+    cursor.execute("SELECT * FROM actors")
+    return actors.fetchall()
 
 # fetch the result (single)
 # result = cursor.fetchone()
