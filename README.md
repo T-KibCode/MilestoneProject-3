@@ -70,3 +70,33 @@ The issues I faced during this process where a variety of a few not limited to:
 - due to an older instructional video and updates to security measures, as well as my computers outdated OS system, I was unable to complete the email security function portion of this part of the instructional video. However I will highlight the areas of improvement for future work and future projects going forward.
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+
+
+// Rewriting the README file below with the project pivot. 
+
+NewsFlash! - Social Media Website
+Welcome to NewsFlash!, a social media website where users can share their impressions of the world and real-life experiences. This README will provide you with detailed information about the project, its original goal, and the new direction it has taken.
+
+Original Project Idea
+Originally, the project aimed to create a movie review website that would allow users to leave comments and reviews on various movies. The website was designed to utilize PostgreSQL as the movie database and SQLite for the user database. Users would have been able to browse and search for movies, read and write reviews, and engage in discussions related to their favorite films.
+
+Pivot to NewsFlash!
+However, after careful consideration and feedback from users, we decided to pivot the project in a new direction. We recognized the need for a platform where individuals could share their personal experiences, opinions, and thoughts beyond just movie reviews. This led us to the development of NewsFlash!, a social media website that encourages users to express themselves and connect with others through their real-life experiences.
+
+Key Features of NewsFlash!
+NewsFlash! offers a range of features designed to foster engagement and facilitate meaningful conversations:
+
+Personal Stories: Users can share their own stories and experiences, whether they are heartwarming, funny, inspiring, or thought-provoking. They can write detailed accounts, attach relevant images or videos, and add tags to categorize their stories.
+
+Impressions: NewsFlash! allows users to express their impressions of various topics, such as current events, social issues, entertainment, travel, and more. Users can post their thoughts, opinions, and viewpoints, initiating conversations and encouraging others to share their perspectives.
+
+Commenting and Interaction: Users can engage in discussions by commenting on stories and impressions. This fosters a sense of community and enables users to connect with others who have similar interests or opinions.
+
+Personal Profiles: Each user has a personal profile where they can showcase their contributions, including stories, impressions, and comments. Users can follow others and be followed, allowing for the discovery of new content and the formation of connections within the NewsFlash! community.
+
+Technologies Used
+To build NewsFlash!, we utilized the following technologies:
+
+Backend: We used Flask, a Python web framework, along with various libraries and packages including bcrypt, blinker, cachetools, certifi, cffi, chardet, charset-normalizer, click, cryptography, distlib, dnspython, dominate, email-validator, env.py, filelock, Flask-Bcrypt, Flask-Bootstrap, Flask-Login, Flask-Mail, Flask-SQLAlchemy, Flask-WTF, google-api-core, google-api-python-client, google-auth, google-auth-httplib2, google-auth-oauthlib, googleapis-common-protos, greenlet, gspread, itsdangerous, Jinja2, jwt, MarkupSafe, mysql, mysqlclient, numpy, oauthlib, odict, optional-django, packaging, pandas, pgsql, Pillow, platformdirs, pluggy, plumber, protobuf, psycopg2-binary, pyasn1, pyasn1-modules, pycparser, PyJWT, pyodbc, pyOpenSSL, pyparsing, pytest, python-dateutil, pytz, PyYAML, requests, requests-oauthlib, rsa, six, SQLAlchemy, svgwrite, touch, Tree, typing_extensions, tzdata, uritemplate, urllib3, values, virtualenv, visitor, Werkzeug, wget, WTForms, zope.component, zope.deferredimport, zope.deprecation, zope.event, zope.hookable, zope.interface, zope.lifecycleevent, and zope.proxy.
+
+Frontend: The frontend of NewsFlash! was developed using HTML5, CSS3, JavaScript, and the Flask-Bootstrap library.
