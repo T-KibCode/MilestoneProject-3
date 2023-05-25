@@ -55,4 +55,3 @@ values==2020.12.3
 virtualenv==20.21.0
 Werkzeug==2.2.3
 WTForms==3.0.1
-web: python run.py
