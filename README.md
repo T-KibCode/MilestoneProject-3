@@ -1,3 +1,6 @@
+App Deployment Link: https://news-flash.herokuapp.com/
+GitHub Repository link: https://github.com/T-KibCode/MilestoneProject-3
+
 # Introduction
 
 This project is the third one I've undertaken as part of the Full Stack Software Diploma course at [Codeinstitute.net](https://www.CodeInstitute.net).
