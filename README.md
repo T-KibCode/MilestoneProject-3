@@ -95,4 +95,15 @@ The issues I faced during this process where a variety of a few not limited to:
 
 - due to an older instructional video and updates to security measures, as well as my computers outdated OS system, I was unable to complete the email security function portion of this part of the instructional video. However I will highlight the areas of improvement for future work and future projects going forward.
 
+# Online Validators
+
+### W3 HTML 
+- The W3 HTML validator only returned one Error in the validation error of missing alt tag within my <img> profile for users photos that are uploaded to use for their profiles. This was resolved with only a minor warning of a *main* element tag being returned as unnescessary, however this does not hinder the function of the app in anyway shape or form. 
+
+### W3 C3S
+
+- The W3 C3S validator returned a number of errors due to the use of the CDN link of bootstrap within my project file. These however do not affect the interaction of the webapp in anyway and are sometimes returned with using both custom CSS and CDN CSS from an external libary within the same project. 
+
+### 
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
