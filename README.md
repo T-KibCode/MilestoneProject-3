@@ -1,9 +1,9 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 # App Deployment Link: 
-- https://news-flash.herokuapp.com/ .
+- https://news-flash.herokuapp.com/ 
 # GitHub Repository link: 
-- https://github.com/T-KibCode/MilestoneProject-3 .
+- https://github.com/T-KibCode/MilestoneProject-3 
 
 # Introduction
 
@@ -17,6 +17,8 @@ Originally, the project aimed to create a movie review website that would allow 
 
 Pivot to NewsFlash!
 However, after careful consideration and feedback from users, I  decided to pivot the project in a new direction. We recognized the need for a platform where individuals could share their personal experiences, opinions, and thoughts beyond just movie reviews. This led us to the development of NewsFlash!, a social media website that encourages users to express themselves and connect with others through their real-life experiences.
+
+If running the app locally, please run python run.py or python3 run.py respectively.
 
 # First Time Visitor Goals
 
