@@ -1,5 +1,9 @@
-App Deployment Link: https://news-flash.herokuapp.com/ .
-GitHub Repository link: https://github.com/T-KibCode/MilestoneProject-3 .
+![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+
+# App Deployment Link: 
+- https://news-flash.herokuapp.com/ .
+# GitHub Repository link: 
+- https://github.com/T-KibCode/MilestoneProject-3 .
 
 # Introduction
 
@@ -114,4 +118,4 @@ Any Python code that does not run through this validator within my project is re
 
 
 
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+
