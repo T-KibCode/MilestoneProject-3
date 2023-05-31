@@ -104,6 +104,14 @@ The issues I faced during this process where a variety of a few not limited to:
 
 - The W3 C3S validator returned a number of errors due to the use of the CDN link of bootstrap within my project file. These however do not affect the interaction of the webapp in anyway and are sometimes returned with using both custom CSS and CDN CSS from an external libary within the same project. 
 
-### 
+### PEP8 Validator
+- When running my python code through the validator, it returned an average score of 56%, so I looked for tools that I could use online in order to improve my valdation score on the code itself. I then found the website *Online Python Formatter* {https://www.tutorialspoint.com/online_python_formatter.htm} and using this website, I was able to correct indentation errors in my code to make it both more readable, but also ensure the python code reaches 100% validation through the PEP8 syntax checker. 
+
+Any Python code that does not run through this validator within my project is redundant, though I have kept it present for the sake of showing my initial planning before the step change within my project. 
+
+### Javascript validator
+- As this project did not use any javascript outside of the Bootstrap CDN link, there was no need to run any JS through an external validators. 
+
+
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
