@@ -117,5 +117,29 @@ Any Python code that does not run through this validator within my project is re
 - As this project did not use any javascript outside of the Bootstrap CDN link, there was no need to run any JS through an external validators. 
 
 
+# Website Theme/Designs
+The Website uses a simple Scroll Method Gradient, however in future iterations when the ability to comment on movie and tv series is introduced ( in line with my original idea's for the website) , There will then be a more focused branding and colour to focus the theme of the website and the users. 
 
+![Screen Shot 2023-05-31 at 23 06 33](https://github.com/T-KibCode/MilestoneProject-3/assets/110776212/28663a78-c9d1-4fca-94c1-26adad509182)
 
+Once the Secondary database utilising PostgreSQL to arrange a movie database witha relational table between actors and the movies they star is, is implmented and arranged, I would then use the following Database Scheme to plan this out and implement this: 
+
+![drawSQL-movie-database-export-2023-05-19](https://github.com/T-KibCode/MilestoneProject-3/assets/110776212/57aa0b15-45f9-40e6-8014-ca77d8701a4e)
+
+These were the initial sketch plans of how I wanted the movie app to beging to take shape and look at, but I found I was lacking in time, hence the simpified the version of app has been used in this case:
+
+![Screen Shot 2023-04-11 at 20 29 44](https://github.com/T-KibCode/MilestoneProject-3/assets/110776212/0a7b6ae9-d298-409e-9a35-7dba0e414aa1)
+
+# Mobile Responsive
+
+The App I've designed is fully mobile responsive for all users and has been tested within multiple browers to ensure its effectiveness. 
+
+# Special Thanks
+
+I would like to give thanks for Code Institute for providing this course that has allowed me learn the skills I have developed up to this point.
+
+I would also like to thank my class mates that have helped me look at other key area's to understand where I have been going wrong. 
+
+I would also like to thank my Mentor *Ronan*, of whom has helped highlight area's where my prevous projects have been lacking in order to help me develop as an individual during this journey.
+
+And most of all, I would like to thank my Class tutor *Mohamed* of whom has been extremely patient with my personal circumstancces over the last 6 months, and has allowed me to be able to finish this project in order to complete my studies in this area, whilst providing support as best as he can for me, all at a time when public funding of our education, healthcare and public services area being stress tested and managing more of a workload then initially envisioned. 
