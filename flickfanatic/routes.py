@@ -23,11 +23,6 @@ def home():
     return render_template('home.html', posts=posts)
 
 
-@app.route('/search')
-def search():
-    return render_template('search.html', title='Movie Search')
-
-
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if current_user.is_authenticated:  # type: ignore
