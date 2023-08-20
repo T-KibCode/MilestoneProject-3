@@ -134,7 +134,26 @@ These were the initial sketch plans of how I wanted the movie app to beging to t
 
 # Mobile Responsive
 
-The App I've designed is fully mobile responsive for all users and has been tested within multiple browers to ensure its effectiveness. 
+The App I've designed is fully mobile responsive for all users and has been tested within multiple browers to ensure its effectiveness.
+
+# Deployment
+
+The App has been deployed using Heroku and can be found at the following link: https://news-flash.herokuapp.com/.
+I used the following steps to deploy the app to Heroku:
+- Log into the Heroku website and create a new app.
+- Select the region closest to you.
+- Click on the Deploy tab and select Heroku Git as the deployment method.
+- Install the Heroku CLI and log into your account using the command heroku login -i.
+- Create a requirements.txt file using the command pip3 freeze > requirements.txt.
+- Create a Procfile using the command echo web: python app.py > Procfile.
+- Add and commit the files to Git using the commands git add . and git commit -m "Initial commit".
+- Add the Heroku app as a remote using the command heroku git:remote -a <news-flash>.
+- Push the files to Heroku using the command git push heroku master.
+- Set the IP and PORT environment variables in the Heroku Config Vars.
+- Click on the Deploy Tab and click on Enable Automatic Deploys.
+- Link the App to the GitHub repository using the Connect to GitHub option.
+- Click on Deploy Branch to deploy the app to Heroku.
+- Check that the app now deplys when a commit is made to github.
 
 # Special Thanks
 
@@ -144,4 +163,4 @@ I would also like to thank my class mates that have helped me look at other key 
 
 I would also like to thank my Mentor *Ronan*, of whom has helped highlight area's where my prevous projects have been lacking in order to help me develop as an individual during this journey.
 
-And most of all, I would like to thank my Class tutor *Mohamed* of whom has been extremely patient with my personal circumstancces over the last 6 months, and has allowed me to be able to finish this project in order to complete my studies in this area, whilst providing support as best as he can for me, all at a time when public funding of our education, healthcare and public services area being stress tested and managing more of a workload then initially envisioned. 
+And most of all, I would like to thank my Class tutor *Mohamed* of whom has been extremely patient with my personal circumstancces over the last 6 months, and has allowed me to be able to finish this project in order to complete my studies in this area, whilst providing support as best as he can for me, all at a time when public funding of our education, healthcare and public services area being stress tested and managing more of a workload then initially envisioned.
