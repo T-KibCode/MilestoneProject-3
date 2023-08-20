@@ -4,7 +4,7 @@ import psycopg2
 import flickfanatic
 
 up.uses_netloc.append("postgres")
-url = up.urlparse(os.environ["postgres://ijxmarjs:pTVmCWurbcXqnbx0Gwxs_CRh8YWuZZvi@rogue.db.elephantsql.com/ijxmarjs"])
+url = up.urlparse(os.environ["postgres://vffxgfql:HHT3samGJKgbmuD9lJsJkLKYL30BR2xy@rogue.db.elephantsql.com/vffxgfql"])
 conn = psycopg2.connect(database=url.path[1:],
 user=url.username,
 password=url.password,
