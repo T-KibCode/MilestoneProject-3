@@ -12,10 +12,6 @@ This project is the third one I've undertaken as part of the Full Stack Software
 NewsFlash! - Social Media Website
 Welcome to NewsFlash!, a social media website where users can share their impressions of the world and real-life experiences. This README will provide you with detailed information about the project, its original goal, and the new direction it has taken.
 
-Original Project Idea
-Originally, the project aimed to create a movie review website that would allow users to leave comments and reviews on various movies. The website was designed to utilize PostgreSQL as the movie database and SQLite for the user database. Users would have been able to browse and search for movies, read and write reviews, and engage in discussions related to their favorite films.
-
-Pivot to NewsFlash!
 After careful consideration, I  decided to move the project in this direction. I recognized the need for a platform where individuals could share their personal experiences, opinions, and thoughts about everyday affairs, similar to other social media websites. This led us to the development of NewsFlash!, a social media website that encourages users to express themselves and connect with others through their real-life experiences.
 
 If running the app locally, please run python run.py or python3 run.py respectively.
