@@ -39,8 +39,7 @@ Backend: We used Flask, a Python web framework, along with various libraries and
 The Use of the multiple backend packages was to deal with the initial building blocks of the backend database when planning which packages would be used. However as I ran out of time towards the end of the project, I have had to strip back my intial ideas that I wanted to put into this project, and will instead talk about them as if they were to be implemented within a future release.
 
 These include the ability for users to comment on other user's posts, whilst maintaining the security of each individual contribution to that post. This would allow each user to ability to #CREATE their post( or a comment on someone else's post), #READ the post along with the date and time that comment/post was made, #UPDATE their post/ comment that the individual has contributed securely, and #DELETE their comment/post if the user wishes to do so, there fulfilling the CRUD function needed within the app.
-  
-However, it should be noted, that I would like to expand this in future instances to be closer to the original vision of this app as a movie/TV show social website with the following User stories and aims;
+
 
 # User Stories
   
