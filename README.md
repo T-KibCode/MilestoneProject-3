@@ -113,17 +113,13 @@ The Website uses a simple Scroll Method Gradient, however in future iterations w
 
 ![Screen Shot 2023-05-31 at 23 06 33](https://github.com/T-KibCode/MilestoneProject-3/assets/110776212/28663a78-c9d1-4fca-94c1-26adad509182)
 
-Once the Secondary database utilising PostgreSQL to arrange a movie database witha relational table between actors and the movies they star is, is implmented and arranged, I would then use the following Database Scheme to plan this out and implement this: 
-
-![drawSQL-movie-database-export-2023-05-19](https://github.com/T-KibCode/MilestoneProject-3/assets/110776212/57aa0b15-45f9-40e6-8014-ca77d8701a4e)
-
 These were the initial sketch plans of how I wanted the movie app to beging to take shape and look at, but I found I was lacking in time, hence the simpified the version of app has been used in this case:
 
 ![Screen Shot 2023-04-11 at 20 29 44](https://github.com/T-KibCode/MilestoneProject-3/assets/110776212/0a7b6ae9-d298-409e-9a35-7dba0e414aa1)
 
 # Mobile Responsive
 
-The App I've designed is fully mobile responsive for all users and has been tested within multiple browers to ensure its effectiveness.
+The App I've designed is fully mobile responsive for all users and has been tested within multiple browsers to ensure its effectiveness.
 
 # Deployment
 
@@ -142,14 +138,6 @@ I used the following steps to deploy the app to Heroku:
 - Click on the Deploy Tab and click on Enable Automatic Deploys.
 - Link the App to the GitHub repository using the Connect to GitHub option.
 - Click on Deploy Branch to deploy the app to Heroku.
-- Check that the app now deplys when a commit is made to github.
+- Check that the app now deploys when a commit is made to github.
 
-# Special Thanks
 
-I would like to give thanks for Code Institute for providing this course that has allowed me learn the skills I have developed up to this point.
-
-I would also like to thank my class mates that have helped me look at other key area's to understand where I have been going wrong. 
-
-I would also like to thank my Mentor *Ronan*, of whom has helped highlight area's where my prevous projects have been lacking in order to help me develop as an individual during this journey.
-
-And most of all, I would like to thank my Class tutor *Mohamed* of whom has been extremely patient with my personal circumstancces over the last 6 months, and has allowed me to be able to finish this project in order to complete my studies in this area, whilst providing support as best as he can for me, all at a time when public funding of our education, healthcare and public services area being stress tested and managing more of a workload then initially envisioned.
