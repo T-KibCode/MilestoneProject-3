@@ -7,10 +7,10 @@ import jwt
 from PIL import Image
 from flask import abort, render_template, url_for, flash, redirect, \
     request
-from flickfanatic import app, db, bcrypt
-from flickfanatic.forms import RegistrationForm, LoginForm, \
+from newsflash import app, db, bcrypt
+from newsflash.forms import RegistrationForm, LoginForm, \
     UpdateAccountForm, PostForm
-from flickfanatic.models import User, Post
+from newsflash.models import User, Post
 from flask_login import login_user, current_user, logout_user, \
     login_required
 

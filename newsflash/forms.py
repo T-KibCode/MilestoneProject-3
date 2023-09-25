@@ -8,7 +8,7 @@ from wtforms import StringField, PasswordField, SubmitField, \
     BooleanField, TextAreaField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, \
     ValidationError
-from flickfanatic.models import User
+from newsflash.models import User
 
 
 class RegistrationForm(FlaskForm):

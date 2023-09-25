@@ -1,6 +1,6 @@
 import os
-import flickfanatic
-from flickfanatic import app
+import newsflash
+from newsflash import app
 
 if __name__ == "__main__":
     app.run(

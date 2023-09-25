@@ -1,7 +1,7 @@
 import os
 import urllib.parse as up
 import psycopg2
-import flickfanatic
+import newsflash
 
 up.uses_netloc.append("postgres")
 url = up.urlparse(os.environ["postgres://vffxgfql:HHT3samGJKgbmuD9lJsJkLKYL30BR2xy@rogue.db.elephantsql.com/vffxgfql"])

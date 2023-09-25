@@ -1,9 +1,9 @@
 from flask import (render_template, url_for, flash,
                    redirect, request, abort, Blueprint)
 from flask_login import current_user, login_required
-from flickfanatic import db
-from flickfanatic.models import Post
-from flickfanatic.posts.forms import PostForm
+from newsflash import db
+from newsflash.models import Post
+from newsflash.posts.forms import PostForm
 
 posts = Blueprint('posts', __name__)
 
